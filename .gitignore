@@ -1,0 +1,16 @@
+certs/*
+!certs/.gitkeep
+keys/*
+!keys/.gitkeep
+/test_certs/
+logs/*
+!logs/.gitkeep
+*.pt
+__pycache__/
+venv/
+.coverage
+
+/rezultati/
+/demo_osoba.mp4
+/demo_bez_osobe.mp4
+.cache/

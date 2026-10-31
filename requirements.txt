@@ -1,0 +1,7 @@
+dronekit
+pymavlink
+future
+opencv-python
+ultralytics
+numpy
+PyYAML

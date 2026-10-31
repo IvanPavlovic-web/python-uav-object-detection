@@ -1,0 +1,34 @@
+# Podrazumijevana misija za ArduPilot SITL (početna tačka je CMAC, Canberra).
+# Koordinate su blizu SITL početne pozicije (-35.363261, 149.165230).
+mission_name: "MARA-1 test misija"
+
+# Visina polijetanja u metrima (relativno u odnosu na tačku polijetanja).
+takeoff_altitude: 10
+
+# Detekcija objekta
+target_object: person            # klasa iz COCO skupa (person, car, bicycle ...)
+confidence_threshold: 0.60       # minimalna pouzdanost detekcije (0.0 - 1.0)
+required_consecutive_frames: 3   # koliko uzastopnih frame-ova mora potvrditi objekat
+detection_action: LOITER         # LOITER, RTL ili LAND
+stop_on_detection: true          # true: zaustavi misiju; false: zadrži poziciju pa nastavi
+resume_hold_seconds: 5           # koliko dugo lebdjeti prije nastavka (ako je stop false)
+detection_cooldown_seconds: 30   # pauza prije nove detekcije (ako je stop false)
+
+# Praćenje waypoint tačaka
+waypoint_radius_m: 2.0           # tačka je dostignuta kada je dron bliže od ovoga
+waypoint_timeout_s: 120          # ograničenje trajanja jednog dijela puta
+end_action: RTL                  # šta raditi nakon zadnje tačke: RTL, LAND ili LOITER
+
+waypoints:
+  - name: "WP1"
+    lat: -35.362900
+    lon: 149.165600
+    alt: 10
+  - name: "WP2"
+    lat: -35.362600
+    lon: 149.166000
+    alt: 12
+  - name: "WP3"
+    lat: -35.363000
+    lon: 149.166400
+    alt: 10
